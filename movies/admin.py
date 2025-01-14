@@ -17,3 +17,8 @@ class MovieAdmin(admin.ModelAdmin):
 
 admin.site.register(Genre, GenreAdmin)
 admin.site.register(Movie, MovieAdmin)
+ 
+ 
+class MovieAdmin(admin.ModelAdmin):
+    """Configures the Movie model in the admin with excluded fields."""
+    exclude = ('date_created',)
